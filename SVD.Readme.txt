@@ -1,0 +1,27 @@
+The Singular Value Decomposition (SVD) algorithms works by approximating the original matrix using a wide matrix (same number of columns, fewer rows) of components.  The components can be interpreted as "genres."  When predicting ratings, the user's provided ratings are used to find the genres of interest and then produce the predicted ratings.
+
+ 
+
+The SVD Algorithm
+
+You will use TruncatedSVD algorithm from Scikit-Learn.  The algorithm has one parameter of significance, the number of components k.
+
+ 
+
+In the fit() method of your class, call the fit() method on a TruncatedSVD object.  In your predict() method, call the transform() method of the TruncatedSVD object followed by the inverse_transform() method to get the predicted ratings.  Note that inverse_transform() will return a dense 2D Numpy array.
+
+ 
+
+You should write unit tests for your implementation using Python's unittest library.
+
+ 
+
+Evaluation
+
+Evaluate the SVD algorithm with a range of values (e.g., 25, 50, 100, 150, 200) for k.  It can be helpful to first fit the TruncatedSVD with a large value of k and then plot the explained variance ratios of the components to determine the magnitude of the contributions of components when picking values of k.
+
+ 
+
+Submission
+
+You should submit a Jupyter notebook (HTML format) with your code and analyses.  Include your name and a summary of the work, results, and what you learned in bulleted form at the top or bottom of your notebook.
